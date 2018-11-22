@@ -1,14 +1,23 @@
 <?php
 include_once('Creator.php');
+include_once('ConProductA.php');
+include_once('ConProductB.php');
 class ConcreteCreator extends Creator
 {
-    function factoryMethod()
+    function factoryMethod($type)
     {
-        // TODO: Implement factoryMethod() method.
+        if ($type == 'A'){
+            return new ConProductA();
+        }
+        if ($type == 'B'){
+            return new ConProductB();
+        }
+        return false;
     }
 
+    // default
     function AnOperation()
     {
-        // TODO: Implement AnOperation() method.
+        echo "this default";
     }
 }

@@ -1,24 +1,19 @@
 <?php
+include_once('ConcreteStrategyA.php');
+include_once('ConcreteStrategyB.php');
 class Context
 {
-    private $realSubject;
+    private $strategy;
 
-    protected function request()
-    {
-        // TODO: Implement request() method.
-        $this->realSubject = new RealSubject();
-        $this->realSubject->request();
+    public function __construct(IStrategy $strategy){
+        $this->strategy = $strategy;
     }
 
-    public function login($un, $pw)
-    {
-        if($un === "Professional" && $pw === "acp"){
-            $this->request();
-        }else{
-            print "Cry 'Havoc,' and let slip the dogs of war!";
-        }
+    public function algorithm($elements){
+        $this->strategy->algorithm($elements);
     }
 }
 
-$worker = new Proxy();
-$worker->login("Professional","acp");
+$strategy = new ConProductA();
+$worker = new Context($strategy);
+$worker->algorithm('strategy ');

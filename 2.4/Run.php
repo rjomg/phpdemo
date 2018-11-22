@@ -23,5 +23,5 @@ $a = array(
     '111'
 );
 
-$worker = new Run();
+$worker = new NorthRegion();
 $worker->numMethod($a);

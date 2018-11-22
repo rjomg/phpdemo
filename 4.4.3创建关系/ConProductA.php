@@ -1,11 +1,14 @@
 <?php
 include_once('Product.php');
 
-class ConcreteStrategyA extends Product {
+class ConProductA extends Product {
 
-
-    function testHello()
+    function Hello()
     {
-        echo "AAAAA";
+        echo "Hello A";
+    }
+
+    public function AnOperation(){
+        echo 1;
     }
 }

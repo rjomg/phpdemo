@@ -1,11 +1,11 @@
 <?php
 include_once('IStrategy.php');
 
-class ConcreteStrategyA extends ISubject {
+class ConcreteStrategyA implements IStrategy {
 
-    protected function request()
+    public function algorithm($elements)
     {
-        // TODO: Implement request() method.
-        echo 'RealSubject';
+        // TODO: Implement algorithm() method.
+        echo $elements.'A';
     }
 }

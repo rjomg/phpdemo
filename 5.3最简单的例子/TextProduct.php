@@ -1,5 +1,13 @@
 <?php
-abstract class Product
+include_once ('Product.php');
+class TextProduct implements Product
 {
-    abstract function getProperties();
+    private $mfgProduct;
+
+    public function getProperties()
+    {
+        // TODO: Implement getProperties() method.
+        $this->mfgProduct = "This is text";
+        return $this->mfgProduct;
+    }
 }

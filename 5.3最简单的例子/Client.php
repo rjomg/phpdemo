@@ -1,19 +1,19 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: 11642
- * Date: 2018/11/15
- * Time: 11:57
- */
-include_once ('ConcreteCreator.php');
-$create = new ConcreteCreator();
-$product = $create->factoryMethod('A');
-$product->Hello();
-$product->AnOperation();
+include_once ('GraphicFactory.php');
+include_once ('TextFactory.php');
 
-$product = $create->factoryMethod('B');
+class Client
+{
+    private $someGraphicObject;
+    private $someTextObject;
 
-$product->Hello();
+    public function __construct()
+    {
+        $this->someGraphicObject = new GraphicFactory();
+        echo $this->someGraphicObject->startFactory() . "<br/>";
+        $this->someTextObject = new TextFactory();
+        echo $this->someTextObject->startFactory() . "<br/>";
+    }
+}
 
-
-
+$worker = new Client();

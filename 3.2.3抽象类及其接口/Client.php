@@ -1,18 +1,18 @@
 <?php
-include_once('IAbstract.php');
-class WestRegion extends IAbstract {
+include_once('NorthRegion.php');
+include_once('WestRegion.php');
 
-    protected function giveCost()
-    {
-        // TODO: Implement giveCost() method.
-        $solarSavings = 2;
-        $this->valueNow = 210.54/$solarSavings;
-        return $this->valueNow;
+class Client{
+    public function __construct(){
+        $north = new NorthRegion();
+        $west = new WestRegion();
+        $this->showInterFace($north);
+        $this->showInterFace($west);
     }
 
-    protected function giveCity()
-    {
-        // TODO: Implement giveCity() method.
-        return "Rattlesnake Gulch";
+    public function showInterFace(IAbstract $region){
+        echo $region->displayShow() . "<br />";
     }
 }
+
+$worker = new Client();

@@ -1,14 +1,13 @@
 <?php
-include_once('Product.php');
+include_once('Creator.php');
+include_once('TextProduct.php');
 
-class TextFactory extends Product {
+class TextFactory extends Creator {
 
-    function Hello()
+    protected function factoryMethod()
     {
-        echo "Hello A";
-    }
-
-    public function AnOperation(){
-        echo 1;
+        // TODO: Implement factoryMethod() method.
+        $product = new TextProduct();
+        return ($product->getProperties());
     }
 }

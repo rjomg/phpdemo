@@ -1,18 +1,18 @@
 <?php
-include_once('IAbstract.php');
-class WestRegion extends IAbstract {
+include_once('DoMath.php');
 
-    protected function giveCost()
-    {
-        // TODO: Implement giveCost() method.
-        $solarSavings = 2;
-        $this->valueNow = 210.54/$solarSavings;
-        return $this->valueNow;
+class InheritMath extends DoMath
+{
+    private $textOut;
+    private $fullFace;
+
+    public function numToText($num){
+        $this->textOut = (string)$num;
+        return $this->textOut;
     }
 
-    protected function giveCity()
-    {
-        // TODO: Implement giveCity() method.
-        return "Rattlesnake Gulch";
+    public function addFace($face, $msg){
+        $this->fullFace = "<strong>" . $face . "</strong>: " . $msg;
+        return $this->fullFace;
     }
 }

@@ -1,10 +1,10 @@
 <?php
 include_once('Product.php');
 
-class ConProductA extends Product {
+class ConProductB extends Product {
 
-    function testHello()
+    function Hello()
     {
-        echo "BBBBB";
+        echo "Hello B";
     }
 }

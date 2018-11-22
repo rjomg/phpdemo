@@ -1,5 +1,5 @@
 <?php
-abstract class Product
+interface Product
 {
-    abstract function Hello();
+    public function getProperties();
 }

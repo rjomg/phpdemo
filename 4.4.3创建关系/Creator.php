@@ -1,4 +1,5 @@
 <?php
-interface Creator{
-    public function algorithm($elements);
+abstract class Creator{
+    abstract function factoryMethod($type);
+    public function AnOperation(){}
 }

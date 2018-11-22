@@ -1,6 +1,5 @@
 <?php
-include_once('DoMath.php');
-class InheritMath extends DoMath
+class DoText
 {
     private $textOut;
     private $fullFace;

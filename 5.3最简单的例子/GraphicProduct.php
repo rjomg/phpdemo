@@ -1,13 +1,13 @@
 <?php
 include_once ('Product.php');
-class TextProduct extends Product
+class GraphicProduct implements Product
 {
     private $mfgProduct;
 
-    function getProperties()
+    public function getProperties()
     {
         // TODO: Implement getProperties() method.
-        $this->mfgProduct = "This is text";
+        $this->mfgProduct = "This is a Graphic.<3";
         return $this->mfgProduct;
     }
 }

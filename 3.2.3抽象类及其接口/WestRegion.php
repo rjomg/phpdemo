@@ -1,16 +1,18 @@
 <?php
 include_once('IAbstract.php');
-class NorthRegion extends IAbstract {
+class WestRegion extends IAbstract {
 
     protected function giveCost()
     {
         // TODO: Implement giveCost() method.
-        return 210.54;
+        $solarSavings = 2;
+        $this->valueNow = 210.54/$solarSavings;
+        return $this->valueNow;
     }
 
     protected function giveCity()
     {
         // TODO: Implement giveCity() method.
-        return "Moose Breach";
+        return "Rattlesnake Gulch";
     }
 }

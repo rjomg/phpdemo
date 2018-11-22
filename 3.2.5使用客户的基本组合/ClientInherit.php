@@ -1,8 +1,9 @@
 <?php
 include_once('InheritMath.php');
+
 class ClientInherit{
     private $added;
-    private $divded;
+    private $divided;
     private $textNum;
     private $outPut;
 
@@ -10,7 +11,11 @@ class ClientInherit{
     {
         $family = new InheritMath();
         $this->added = $family->simpleAdd(40, 60);
-        $this->divded = $family->simpleDivide($this->added, 25);
-        $this->textNum =
+        $this->divided = $family->simpleDivide($this->added, 25);
+        $this->textNum = $family->numToText($this->divided);
+        $this->outPut = $family->addFace("Your results", $this->textNum);
+        echo $this->outPut;
     }
 }
+
+$worker = new ClientInherit();

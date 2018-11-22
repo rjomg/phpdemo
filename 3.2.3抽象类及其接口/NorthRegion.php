@@ -1,27 +1,16 @@
 <?php
 include_once('IAbstract.php');
-class Run implements IFace
-{
-    function StringMethod()
+class NorthRegion extends IAbstract {
+
+    protected function giveCost()
     {
-        // TODO: Implement StringMethod() method.
+        // TODO: Implement giveCost() method.
+        return 210.54;
     }
 
-    function numMethod($intProp)
+    protected function giveCity()
     {
-        // TODO: Implement numMethod() method.
-        return $intProp;
-    }
-
-    function NoReturnMethod()
-    {
-        // TODO: Implement NoReturnMethod() method.
+        // TODO: Implement giveCity() method.
+        return "Moose Breach";
     }
 }
-
-$a = array(
-    '111'
-);
-
-$worker = new Run();
-$worker->numMethod($a);
